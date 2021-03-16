@@ -1,0 +1,25 @@
+{
+  "name": "webpack-tutorial",
+  "private": true,
+  "version": "1.0.0",
+  "description": "a tutorial for webpack",
+  "main": "index.js",
+  "scripts": {
+    "start":"webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seif1125/webpack-tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seif1125/webpack-tutorial/issues"
+  },
+  "homepage": "https://github.com/seif1125/webpack-tutorial#readme",
+  "devDependencies": {
+    "webpack": "^5.26.1",
+    "webpack-cli": "^4.5.0"
+  }
+}
