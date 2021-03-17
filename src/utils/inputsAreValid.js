@@ -1,3 +1,5 @@
 const inputsAreValid = (...inputNumbers) => {
   return inputNumbers.every((num) => typeof num === "number" && !isNaN(num));
 };
+
+export default inputsAreValid;

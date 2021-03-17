@@ -1,1 +1,3 @@
-alert("hi webpack");
+import run from "./app";
+
+run();
