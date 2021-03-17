@@ -1,5 +1,5 @@
-const path=require('path')
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+
 
 module.exports = {
 
@@ -8,14 +8,8 @@ module.exports = {
    vendor:"./src/vendor.js",
 },
 
-  plugins: [
-    new HtmlWebpackPlugin({
-      template:"./index.html"
-    })
-  ],
   module: {
-    rules: [
-        
+    rules: [     
        {
         test: /\.html$/,
         use:["html-loader"]

@@ -6,7 +6,7 @@ const alertService = new AlertService();
 const componentService = new ComponentService();
 
 const run = () => {
-  console.log("hghg")
+ 
   alertService.hideErrors();
 
   componentService.onClick(() => {
