@@ -1,10 +1,13 @@
 const path=require('path')
 const HtmlWebpackPlugin = require("html-webpack-plugin");
- const { merge } = require("webpack-merge");
+
 module.exports = {
 
-  entry: "./src/index.js",
- 
+  entry: {
+    main:"./src/index.js",
+   vendor:"./src/vendor.js",
+},
+
   plugins: [
     new HtmlWebpackPlugin({
       template:"./index.html"
@@ -12,10 +15,21 @@ module.exports = {
   ],
   module: {
     rules: [
-      {
-        test: /\.scss$/,
-        use: ["style-loader", "css-loader","sass-loader"],
+        
+       {
+        test: /\.html$/,
+        use:["html-loader"]
       },
+        {
+        test: /\.(png|jpe?g|gif)$/,
+        use:{
+        loader: 'file-loader',
+        options: {
+          name:"[name]",
+          outputPath: 'images',
+        },
+      }
+    }
     ],
   },
 };
