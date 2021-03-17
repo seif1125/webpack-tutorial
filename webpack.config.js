@@ -1,18 +1,29 @@
-const path=require('path')
+
+
+
 module.exports = {
-  mode: "development",
-  entry: "./src/index.js",
-  output: {
-    filename: "build.js",
-    path: path.resolve(__dirname, "build"),
-  },
+
+  entry: {
+    main:"./src/index.js",
+   vendor:"./src/vendor.js",
+},
 
   module: {
-    rules: [
-      {
-        test: /\.scss$/,
-        use: ["style-loader", "css-loader","sass-loader"],
+    rules: [     
+       {
+        test: /\.html$/,
+        use:["html-loader"]
       },
+        {
+        test: /\.(png|jpe?g|gif)$/,
+        use:{
+        loader: 'file-loader',
+        options: {
+          name:"[name]",
+          outputPath: 'images',
+        },
+      }
+    }
     ],
   },
 };

@@ -4,7 +4,9 @@ import inputsAreValid from "./utils/inputsAreValid";
 import parseInputs from "./utils/parseInput";
 const alertService = new AlertService();
 const componentService = new ComponentService();
+
 const run = () => {
+ 
   alertService.hideErrors();
 
   componentService.onClick(() => {
